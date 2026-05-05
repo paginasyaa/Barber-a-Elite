@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería Elite - Dominá tu Estilo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'carbon': '#1a1a1a',
+                        'charcoal': '#2d2d2d',
+                        'gold': '#D4AF37',
+                        'wood': '#8B4513',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        .hover-gold { transition: all 0.3s ease; }
+        .hover-gold:hover { color: #D4AF37 !important; transform: translateY(-2px); }
+        .btn-whatsapp { 
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            transition: all 0.3s ease;
+        }
+        .btn-whatsapp:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-carbon text-white overflow-x-hidden">
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 md:pt-0">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 bg-gradient-to-br from-charcoal via-carbon to-black opacity-80"></div>
+        <div class="absolute top-20 left-0 w-full h-32 bg-gradient-to-r from-gold/10 to-wood/10 transform skew-y-6"></div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <!-- Badge -->
+                <div class="inline-flex items-center bg-gold/20 border-2 border-gold/30 rounded-full px-6 py-2 mb-8">
+                    <i class="fas fa-crown text-gold text-xl mr-2"></i>
+                    <span class="font-semibold text-gold tracking-wider">BARBERÍA PROFESIONAL</span>
+                </div>
+                
+                <!-- Main Title -->
+                <h1 class="text-5xl md:text-7xl font-black leading-tight mb-6 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
+                    DOMINÁ TU ESTILO
+                </h1>
+                <h1 class="text-5xl md:text-7xl font-black leading-tight mb-8 bg-gradient-to-r from-gold to-wood bg-clip-text text-transparent">
+                    CON CORTES QUE TE HACEN <span class="block">DESTACAR</span>
+                </h1>
+                
+                <!-- Subtitle -->
+                <p class="text-xl md:text-2xl font-light text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+                    Expertos en barbería clásica y tendencias modernas en un ambiente exclusivo
+                </p>
+                
+                <!-- CTA Button -->
+                <a href="https://wa.me/59800000000?text=¡Hola!%20Quiero%20reservar%20un%20turno" 
+                   class="btn-whatsapp group inline-flex items-center gap-4 px-12 py-6 rounded-full text-xl font-semibold text-white shadow-2xl hover:shadow-gold/25 transform transition-all duration-300 max-w-max mx-auto">
+                    <i class="fab fa-whatsapp text-2xl group-hover:animate-bounce"></i>
+                    Reservar Turno por WhatsApp
+                    <i class="fas fa-arrow-right text-lg group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-1/2 right-10 w-32 h-32 bg-gold/5 rounded-full blur-xl animate-pulse"></div>
+        <div class="absolute bottom-20 left-20 w-48 h-48 bg-wood/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-32 bg-gradient-to-b from-carbon to-charcoal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-24">
+                <h2 class="text-4xl md:text-5xl font-black mb-6 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
+                    NUESTROS SERVICIOS
+                </h2>
+                <div class="w-24 h-1 bg-gold mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Service 1 -->
+                <div class="glass-effect group p-10 rounded-3xl hover:bg-white/5 transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl border border-transparent hover:border-gold/30">
+                    <div class="w-20 h-20 bg-gradient-to-br from-gold to-wood rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-scissors text-2xl text-carbon font-bold"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 text-white group-hover:text-gold transition-colors">Corte Clásico</h3>
+                    <p class="text-gray-300 leading-relaxed group-hover:text-white transition-colors">
+                        La elegancia que nunca pasa de moda. Técnica tradicional con acabado impecable.
+                    </p>
+                    <div class="mt-6 pt-6 border-t border-gray-800">
+                        <span class="text-gold font-semibold text-lg">Desde $25</span>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-effect group p-10 rounded-3xl hover:bg-white/5 transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl border border-transparent hover:border-gold/30 md:col-span-1">
+                    <div class="w-20 h-20 bg-gradient-to-br from-gold to-wood rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-cut text-2xl text-carbon font-bold"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 text-white group-hover:text-gold transition-colors">Fade Moderno</h3>
+                    <p class="text-gray-300 leading-relaxed group-hover:text-white transition-colors">
+                        Degradados perfectos con técnica de precisión para el look contemporáneo.
+                    </p>
+                    <div class="mt-6 pt-6 border-t border-gray-800">
+                        <span class="text-gold font-semibold text-lg">Desde $28</span>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-effect group p-10 rounded-3xl hover:bg-white/5 transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl border border-transparent hover:border-gold/30">
+                    <div class="w-20 h-20 bg-gradient-to-br from-gold to-wood rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-hand-holding-medical text-2xl text-carbon font-bold"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4 text-white group-hover:text-gold transition-colors">Barba Pro</h3>
+                    <p class="text-gray-300 leading-relaxed group-hover:text-white transition-colors">
+                        Perfilado y cuidado integral para el hombre moderno. Acabado profesional.
+                    </p>
+                    <div class="mt-6 pt-6 border-t border-gray-800">
+                        <span class="text-gold font-semibold text-lg">Desde $22</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-32 bg-charcoal">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-24">
+                <h2 class="text-4xl md:text-5xl font-black mb-6 bg-gradient-to-r from-gold to-wood bg-clip-text text-transparent">
+                    ¿POR QUÉ ELEGIRNOS?
+                </h2>
+                <div class="w-24 h-1 bg-white mx-auto rounded-full opacity-50"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+                <div class="text-center group hover-gold cursor-default">
+                    <div class="w-24 h-24 bg-gradient-to-br from-gold/20 to-wood/20 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:bg-gold/40 transition-all duration-300">
+                        <i class="fas fa-user-tie text-3xl text-gold"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4">Atención Profesional</h3>
+                    <p class="text-gray-300 text-lg leading-relaxed max-w-md mx-auto">
+                        Barberos certificados con +10 años de experiencia
+                    </p>
+                </div>
+                
+                <div class="text-center group hover-gold cursor-default">
+                    <div class="w-24 h-24 bg-gradient-to-br from-gold/20 to-wood/20 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:bg-gold/40 transition-all duration-300">
+                        <i class="fas fa-sync-alt text-3xl text-gold"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4">Estilo Moderno</h3>
+                    <p class="text-gray-300 text-lg leading-relaxed max-w-md mx-auto">
+                        Técnicas actuales combinadas con clásicos atemporales
+                    </p>
+                </div>
+                
+                <div class="text-center group hover-gold cursor-default">
+                    <div class="w-24 h-24 bg-gradient-to-br from-gold/20 to-wood/20 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:bg-gold/40 transition-all duration-300">
+                        <i class="fas fa-medal text-3xl text-gold"></i>
+                    </div>
+                    <h3 class="text-2xl font-black mb-4">Resultados Garantizados</h3>
+                    <p class="text-gray-300 text-lg leading-relaxed max-w-md mx-auto">
+                        Satisfacción 100% o te lo arreglamos gratis
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios Section -->
+    <section class="py-32 bg-gradient-to-b from-charcoal to-carbon">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-24">
+                <h2 class="text-4xl md:text-5xl font-black mb-6 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
+                    TESTIMONIOS
+                </h2>
+                <div class="w-24 h-1 bg-gold mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="glass-effect p-10 rounded-3xl text-center hover:bg-white/5 transition-all duration-500 hover:-translate-y-2">
+                    <div class="flex justify-center mb-6">
+                        <i class="fas fa-star text-gold text-2xl"></i>
+                        <i class="fas fa-star text-gold text-2xl"></i>
+                        <i class="fas fa-star text-gold text-2xl"></i>
+                        <i class="fas fa-star text-gold text-2xl"></i>
+                        <i class="fas fa-star text-gold text-2xl"></i>
+                    </div>
+                    <p class="text-gray-300 italic font-medium mb-6">"Excelente servicio, muy profesional"</p>
+                    <div class="text-gold font-semibold">- Juan Pérez</div>
+                </div>
+
+                <div class="glass-effect p-10 rounded-3xl text-center hover:bg-white/5 transition-all duration-500 hover:-translate-y-2 md:col-span-1">
+                    <div class="flex justify-center mb-6">
+                        <i class="fas fa-star text-gold text-2xl"></i>
+                        <i class="fas fa-star text-gold text-2xl"></i>
+                        <i class="fas fa-star text-gold text-2xl"></i>
+                        <i class="fas fa-star text-gold text-2xl"></i>
+                        <i class="fas fa-star text-gold text-2xl"></i>
+                    </div>
+                    <p class="text-gray-300 italic font-medium mb-6">"Muy buena atención y resultados"</p>
+                    <div class="text-gold font-semibold">- Carlos López</div>
+                </div>
+
+                <div class="glass-effect p-10 rounded-3xl text-center hover:bg-white/5 transition-all duration-500 hover:-translate-y-2">
+                    <div class="flex justify-center mb-6">
+                        <i class="fas fa-star text-gold text-2xl"></i>
+                        <i class="fas fa-star text-gold text-2xl"></i>
+                        <i class="fas fa-star text-gold text-2xl"></i>
+                        <i class="fas fa-star text-gold text-2xl"></i>
+                        <i class="fas fa-star text-gold text-2xl"></i>
+                    </div>
+                    <p class="text-gray-300 italic font-medium mb-6">"Los mejores cortes de la ciudad"</p>
+                    <div class="text-gold font-semibold">- Martín González</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-32 bg-gradient-to-t from-carbon to-charcoal">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 max-w-6xl mx-auto items-center">
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-black mb-8 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
+                        RESERVÁ TU TURNO
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-12 leading-relaxed">
+                        No esperes más para lucir impecable. Contactanos ahora.
+                    </p>
+                    
+                    <!-- WhatsApp CTA -->
+                    <a href="https://wa.me/59800000000?text=¡Hola!%20Quiero%20reservar%20un%20turno" 
+                       class="btn-whatsapp inline-flex items-center gap-4 px-10 py-5 rounded-2xl text-xl font-semibold text-white shadow-2xl mb-8 w-full md:w-auto max-w-md">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                        Chatear por WhatsApp
+                    </a>
+                    
+                    <!-- Schedule -->
+                    <div class="glass-effect p-8 rounded-2xl mb-8">
+                        <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+                            <i class="fas fa-clock text-gold"></i>
+                            Horario
+                        </h3>
+                        <div class="space-y-2 text-gray-300">
+                            <p>Lun-Vie: 9:00 - 20:00</p>
+                            <p>Sáb: 9:00 - 18:00</p>
+                            <p>Dom: Cerrado</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Map Placeholder -->
+                <div class="glass-effect rounded-3xl p-12 text-center">
+                    <i class="fas fa-map-marker-alt text-6xl text-gold mb-8"></i>
+                    <h3 class="text-2xl font-bold mb-4">Nuestra Ubicación</h3>
+                    <p class="text-gray-300 mb-8">Montevideo, Uruguay</p>
+                    <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d419190.18579832406!2d-56.788431232812535!3d-34.83302025331234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80ffc63bf7d3%3A0x6b321b2e355bec99!2sMontevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses-419!2suy!4v1778018886197!5m2!1ses-419!2suy"
+                    class="w-full h-64 rounded-2xl border-0"
+                    allowfullscreen=""
+                    loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="text-center mt-24 pt-16 border-t border-gray-800">
+                <div class="flex justify-center gap-8 mb-8">
+                    <a href="#" class="w-16 h-16 bg-gradient-to-br from-gold/20 to-wood/20 rounded-2xl flex items-center justify-center hover:bg-gold/40 transition-all duration-300 hover-gold">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="#" class="w-16 h-16 bg-gradient-to-br from-gold/20 to-wood/20 rounded-2xl flex items-center justify-center hover:bg-gold/40 transition-all duration-300 hover-gold">
+                        <i class="fab fa-facebook text-2xl"></i>
+                    </a>
+                    <a href="#" class="w-16 h-16 bg-gradient-to-br from-gold/20 to-wood/20 rounded-2xl flex items-center justify-center hover:bg-gold/40 transition-all duration-300 hover-gold">
+                        <i class="fab fa-tiktok text-2xl"></i>
+                    </a>
+                </div>
+                <p class="text-gray-500 text-lg">&copy; 2024 Barbería Elite. Todos los derechos reservados.</p>
+                <p class="text-gray-600 text-sm mt-4">Esta es una landing page de demostración creada como ejemplo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Button Mobile -->
+    <a href="https://wa.me/59800000000?text=¡Hola!%20Quiero%20reservar%20un%20turno" 
+       class="fixed bottom-8 right-8 md:hidden btn-whatsapp w-16 h-16 rounded-full flex items-center justify-center text-2xl shadow-2xl z-50 animate-bounce">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
